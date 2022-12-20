@@ -2,7 +2,7 @@
     <section class="tube-list"></section>
     <ul>
         <li v-for="result in results">
-            <tubePreview :result="result"/>
+            <tubePreview :result="result" @selectSong="selectSong"/>
         </li>
     </ul>
 </template>
@@ -12,6 +12,7 @@ import tubePreview from "../components/tube-preview.vue"
 
 export default {
   name: 'tube-list',
+  emits: ['selectSong'],
   props:{
     results: Array,
   },
@@ -22,15 +23,8 @@ export default {
     }
   },
   methods: {
-      setFilter(filterBy) {
-          this.$store.dispatch({ type: 'setFilter', filterBy })
-          // this.$store.dispatch({ type: 'loadToys' })
-        },
-        goToEdit() {
-            this.$router.push(`/toy/edit`)
-        },
-        removeToy(toyId) {
-            this.$store.dispatch({ type: 'removeToy', _id: toyId })
+    selectSong(result) {
+        this.$emit('selectSong',result)
         },
     },
     computed: {
