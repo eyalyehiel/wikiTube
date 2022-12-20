@@ -1,8 +1,8 @@
 <template>
     <section class="search-bar">
-        <form onsubmit="onSearch(event,'ev')" class="main-search-input flex">
+        <form @submit.prevent="search" class="main-search-input flex">
             <input
-                name="search"
+                v-model="searchKey"
                 class="search-bar-input"
                 type="search"
                 placeholder="Type your search here..."
@@ -18,5 +18,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            searchKey: ''
+        }
+    },
+    methods: {
+        search(){
+            this.$emit('search',this.searchKey)
+        }
+    },
+};
 </script>
