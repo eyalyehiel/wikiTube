@@ -32,6 +32,9 @@ export default {
             this.currSong = this.results[0]
             
         },
+        selectSong(result){
+            this.currSong=result
+        },
     },
     components: {
         tubeDisplay,
