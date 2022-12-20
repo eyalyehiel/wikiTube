@@ -1,10 +1,11 @@
 <template>
-    <section class="tube-list"></section>
+    <section class="tube-list">
     <ul>
         <li v-for="result in results">
             <tubePreview :result="result" @selectSong="selectSong"/>
         </li>
     </ul>
+    </section>
 </template>
 
 <script>

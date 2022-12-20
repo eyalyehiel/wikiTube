@@ -1,7 +1,8 @@
 <template>
     <section class="tube-app">
         <tube-search @search="getSongs"/>
-        <section class="main-layout results-container flex">
+        <section class="list-display-wrapper">
+        <!-- main-layout results-container flex -->
             <tube-list :results="results" />
             <tube-display :currSong="currSong" />
         </section>

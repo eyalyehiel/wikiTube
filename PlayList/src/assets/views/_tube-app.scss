@@ -1,3 +1,12 @@
 .tube-app{
     
 }
+
+.list-display-wrapper{
+    max-width: 1020px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+    background-color: #ddd;
+}
