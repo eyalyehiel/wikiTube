@@ -42,6 +42,7 @@ function getYouTubeData(term) {
 &videoEmbeddable=true&type=video&key=${API_KEY}&q=${term}`
         )
         .then((res) => {
+            console.log(`res = `, res)
             res = res.data.items.slice(0, 4)
             res = arrangeYouTubeObject(res)
             _updateYoutubeCache(term, res)
