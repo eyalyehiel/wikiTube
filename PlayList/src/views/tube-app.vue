@@ -26,8 +26,9 @@ export default {
         }
     },
     methods: {
-        getSongs() {
-            this.results = tubeService.getYouTubeData(this.searchKey)
+        async getSongs(value) {
+            this.searchKey = value 
+            this.results = await tubeService.getYouTubeData(this.searchKey)
         },
     },
     components: {
