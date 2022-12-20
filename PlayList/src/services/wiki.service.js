@@ -77,5 +77,5 @@ function arrangeYouTubeObject(result) {
 }
 
 function _saveResultsToStorage(key, val) {
-    saveToStorage(key, val)
+    storageService.saveToStorage(key, val)
 }
