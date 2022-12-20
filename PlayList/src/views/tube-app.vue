@@ -1,7 +1,7 @@
 <template>
     <section class="tube-app">
         <tube-search @search="getSongs"/>
-        <section class="results flex">
+        <section class="main-layout results-container flex">
             <tube-list :results="results" />
             <tube-display :currSong="currSong" />
         </section>
@@ -29,7 +29,8 @@ export default {
         async getSongs(value) {
             this.searchKey = value 
             this.results = await tubeService.getYouTubeData(this.searchKey)
-            console.log(`this.results = `, this.results)
+            this.currSong = this.results[0]
+            
         },
     },
     components: {

@@ -1,7 +1,7 @@
 <template>
     <section class="tube-list"></section>
-    <ul>
-        <li v-for="result in results">
+    <ul class="videos-preview">
+        <li v-for="result in results" >
             <tubePreview :result="result"/>
         </li>
     </ul>
