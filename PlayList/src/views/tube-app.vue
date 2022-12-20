@@ -16,8 +16,7 @@ import tubeList from "../components/tube-list.vue"
 import tubeSearch from "../components/tube-search.vue"
 export default {
     created() {
-        // this.getSongs()
-        this.results = tubeService.getYouTubeData(this.searchKey)
+        this.getSongs()
     },
     data() {
         return {
@@ -27,8 +26,9 @@ export default {
         }
     },
     methods: {
-        getSongs() {
-            this.results = tubeService.getYouTubeData(this.searchKey)
+        async getSongs(value) {
+            this.searchKey = value 
+            this.results = await tubeService.getYouTubeData(this.searchKey)
         },
     },
     components: {
