@@ -1,4 +1,4 @@
-'use strict'
+
 
 // Originally inspired by  David Walsh (https://davidwalsh.name/javascript-debounce-function)
 
