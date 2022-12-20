@@ -9,7 +9,7 @@
         >
         </iframe>
     </article>
-    <h5>Currently playing: {{ currSong.title }}</h5>
+    <h5 v-if="currSong">Currently playing: {{ currSong.title }}</h5>
 </section>
 </template>
 
