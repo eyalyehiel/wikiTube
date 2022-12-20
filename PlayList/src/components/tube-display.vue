@@ -27,7 +27,7 @@ export default {
     methods: {
         calcAutoPlay(){
             console.log(this.isAutoPlay)
-            return (!this.isAutoPlay) ? 'autoplay=0&mute=1' : 'autoplay=1&mute=0'
+            return (!this.isAutoPlay) ? 'autoplay=0&mute=0' : 'autoplay=1&mute=0'
 
         }
     }
