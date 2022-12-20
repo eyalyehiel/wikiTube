@@ -1,7 +1,7 @@
 <template>
     <section class="search-bar">
         <section class="logo-container">
-            <h1>Wiki<span>Tube</span></h1>
+            <h1>Tube<span>App</span></h1>
         </section>
         <form @submit.prevent="search" class="main-search-input">
             <input
