@@ -16,7 +16,7 @@ import tubeList from "../components/tube-list.vue"
 import tubeSearch from "../components/tube-search.vue"
 export default {
     created() {
-        // this.getSongs()
+        this.getSongs()
     },
     data() {
         return {
