@@ -1,8 +1,8 @@
 .tube-app{
-    width: min(100% - 25px, 1660px);
+    width: min(100% - 25px, 1440px);
     margin-inline: auto;
-    margin-top: 180px;
-   
+    margin-top: 150px;
+  
 }
 
 .list-display-wrapper{
@@ -11,10 +11,23 @@
     margin-inline: auto;
     // display: flex;
     justify-content: space-between;
+    gap: 45px;
     padding-inline: 45px;
     background-color: #ddd;
-    @media screen and (max-width: 800px) {
-        flex-direction: column;
-    }
 
+
+}
+
+@media screen and (max-width: 800px) {
+    .tube-app{
+        width: min(100% - 15px, 1440px);
+        margin-inline: auto;
+        margin-top: 20px;
+      
+    }
+    .list-display-wrapper{
+    flex-direction: column;
+    gap: unset;
+    padding-inline: 15px;
+}
 }
