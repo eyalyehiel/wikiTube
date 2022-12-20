@@ -13,4 +13,8 @@
     justify-content: space-between;
     padding-inline: 45px;
     background-color: #ddd;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+
 }
