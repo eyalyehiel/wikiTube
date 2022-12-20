@@ -1,38 +1,35 @@
 <template>
-    <section class="tube-list">
+  <section class="videos-preview">
     <ul>
-        <li v-for="result in results">
-            <tubePreview :result="result" @selectSong="selectSong"/>
-        </li>
+      <li v-for="result in results">
+        <tubePreview :result="result" @selectSong="selectSong" />
+      </li>
     </ul>
-    </section>
+  </section>
 </template>
 
 <script>
-import tubePreview from "../components/tube-preview.vue"
+  import tubePreview from '../components/tube-preview.vue'
 
-export default {
-  name: 'tube-list',
-  emits: ['selectSong'],
-  props:{
-    results: Array,
-  },
-  data() {
-    return {
-        chosenVideo:null,
-     
-    }
-  },
-  methods: {
-    selectSong(result) {
-        this.$emit('selectSong',result)
-        },
+  export default {
+    name: 'tube-list',
+    emits: ['selectSong'],
+    props: {
+      results: Array,
     },
-    computed: {
+    data() {
+      return {
+        chosenVideo: null,
+      }
     },
+    methods: {
+      selectSong(result) {
+        this.$emit('selectSong', result)
+      },
+    },
+    computed: {},
     components: {
-        tubePreview,
+      tubePreview,
     },
-}
+  }
 </script>
-
