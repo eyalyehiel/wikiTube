@@ -17,6 +17,7 @@ import tubeSearch from "../components/tube-search.vue"
 export default {
     created() {
         // this.getSongs()
+        this.results = tubeService.getYouTubeData(this.searchKey)
     },
     data() {
         return {
