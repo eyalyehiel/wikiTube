@@ -1,11 +1,12 @@
 .search-bar{
-    max-width: 1020px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     margin-inline: auto;
     height: 80px;
     display: flex;
     justify-content: space-between;
     background-color: #ddd;
-    padding-inline: 10px;
+    padding-inline: 45px;
     .logo-container{
         display: flex;
         align-items: center;

@@ -1,12 +1,16 @@
 .tube-app{
-    
+    width: min(100% - 25px, 1660px);
+    margin-inline: auto;
+    margin-top: 180px;
+   
 }
 
 .list-display-wrapper{
-    max-width: 1020px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     margin-inline: auto;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
-    padding-inline: 10px;
+    padding-inline: 45px;
     background-color: #ddd;
 }

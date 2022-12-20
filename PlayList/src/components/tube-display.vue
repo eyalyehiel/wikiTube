@@ -1,15 +1,15 @@
 <template>
-    <section class="video-wrapper flex">
-    <article v-if="currSong" class="iframe-container">
+    <section v-if="currSong" class="video-wrapper flex">
+    <article class="iframe-container">
         <iframe
             class="video-frame"
-            width="634"
-            height="350"
-            :src="`https://www.youtube.com/embed/${currSong.videoId}?${autoplay}`"
+            width="705"
+            height="400"
+            :src="`https://www.youtube.com/embed/${currSong.videoId}?`+calcAutoPlay()"
         >
         </iframe>
     </article>
-    <h5 v-if="currSong">Currently playing: {{ currSong.title }}</h5>
+    <h3>Currently playing:  &nbsp {{ currSong.title }}</h3>
 </section>
 </template>
 
@@ -21,12 +21,13 @@ export default {
     },
     data(){
         return{
-        autoPlay: this.autoPlay
+        autoPlay: this.calcAutoPlay
     }
 },
-    computed: {
-        autoPlay(){
-            return (isAutoPlay) ? '?autoplay=0&mute=1' : '?autoplay=1&mute=0'
+    methods: {
+        calcAutoPlay(){
+            console.log(this.isAutoPlay)
+            return (!this.isAutoPlay) ? 'autoplay=0&mute=1' : 'autoplay=1&mute=0'
 
         }
     }
