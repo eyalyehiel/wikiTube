@@ -4,6 +4,8 @@ const API_KEY = "AIzaSyCODpJLXzI6ZTob42WE5VVGWvtLe7G4m-c"
 let wikiSearchCache = storageService.loadFromStorage(WIKI_STORAGE_KEY) || {}
 let youtubeSearchCache = storageService.loadFromStorage(YouTube_STORAGE_KEY) || {}
 
+import axios from 'axios'
+
 import {storageService} from './storage.service.js'
 export const tubeService = {
   getYouTubeData
