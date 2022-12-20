@@ -12,7 +12,7 @@
                 type="submit"
                 class="search-bar-input btn input"
             ></button>
-                <!-- :style="{'background-image': url("../assets/imgs/search.png")}" -->
+                <!-- :style="{'background-image': 'url("../assets/imgs/search.png")'}" -->
         </form>
     </section>
 </template>
