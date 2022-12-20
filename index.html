@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WikiTube</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body onload="onInit()">
+    <header class="header flex full space-between main-layout align-center">
+      <section class="logo">
+        <span>WikiTube</span>
+      </section>
+      <section class="search-bar">
+        <form onsubmit="onSearch(event,'ev')" class="main-search-input flex">
+          <input
+            name="search"
+            class="search-bar-input"
+            type="search"
+            placeholder="Type your search here..."
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            class="search-bar-input btn input"
+            style="background-image: url(img/search.png)"
+          ></button>
+        </form>
+      </section>
+    </header>
+    <main>
+      <section class="main-layout results-container flex">
+        <section class="videos-preview flex">Videos preview come here</section>
+        <section class="results flex">
+          <article class="iframe-container">
+            <iframe
+              class="video-frame"
+              width="634"
+              height="350"
+              src="https://www.youtube.com/embed/pD0HqG24W4k?autoplay=0&mute=1"
+            >
+            </iframe>
+          </article>
+          <section class="wiki-results-container flex"></section>
+        </section>
+      </section>
+    </main>
+    <footer class="footer main-layout full">
+      <div class="search-history-list flex"></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/wiki.controller.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/wiki.service.js"></script>
+    <script src="js/services/util.service.js"></script>
+  </body>
+</html>
