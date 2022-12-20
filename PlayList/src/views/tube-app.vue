@@ -3,7 +3,7 @@
     <tube-search @search="getSongs" />
     <section class="list-display-wrapper">
       <tube-list @selectSong="selectSong" :results="results" />
-      <tube-display :currSong="currSong" />
+      <tube-display :currSong="currSong" :isAutoPlay="isAutoPlay" />
     </section>
   </section>
 </template>
@@ -23,6 +23,7 @@
         searchKey: 'Fabrizio de Andre',
         results: null,
         currSong: null,
+        isAutoPlay: false
       }
     },
     methods: {
@@ -33,6 +34,7 @@
       },
       selectSong(result) {
         this.currSong = result
+        this.isAutoPlay = true
       },
     },
     components: {
