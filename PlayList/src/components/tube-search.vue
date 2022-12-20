@@ -1,6 +1,9 @@
 <template>
     <section class="search-bar">
-        <form @submit.prevent="search" class="main-search-input flex">
+        <section class="logo-container">
+            <h1>Wiki<span>Tube</span></h1>
+        </section>
+        <form @submit.prevent="search" class="main-search-input">
             <input
                 v-model="searchKey"
                 class="search-bar-input"
@@ -11,7 +14,7 @@
             <button
                 type="submit"
                 class="search-bar-input btn input"
-            ></button>
+            >Search</button>
                 <!-- :style="{'background-image': 'url("../assets/imgs/search.png")'}" -->
         </form>
     </section>
